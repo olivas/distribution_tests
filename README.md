@@ -19,6 +19,6 @@ There are two cases where this project has been used on IceCube:
 2. To verify refactoring.
 
 This work is was inspired by Frank Porter's paper [Testing the Consistency of
-Two Histograms] (https://arxiv.org/abs/0804.0380).  
+Two Histograms](https://arxiv.org/abs/0804.0380).  
 
 
