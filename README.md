@@ -65,7 +65,7 @@ structures, like BDTs, neural nets, or Bayesian networks, to help users
 filter out false positives.
 
 # Contributors
-* Alex Olivas - University of Maryland (UMD)
-* Christoph Raab - Technical University of Munich (TUM)
-* Thomas Stuttard - Neils Bohr Institute (NBI)
-* Tomasz Palczewski - University of California at Berkeley (Cal)
+* Alex Olivas - University of Maryland 
+* Christoph Raab - ULB, Brussels
+* Thomas Stuttard - Neils Bohr Institute
+* Tomasz Palczewski - University of California at Berkeley
