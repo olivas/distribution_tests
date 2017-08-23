@@ -20,8 +20,8 @@ that it's not hard at all to write "physics tests" (or more generally tests of
 functions that produce distributions of continuous variables).
 
 There are two cases where this project has been used on IceCube:
-1. Automated continuous build system.
-2. To verify refactoring.
+1. Automated continuous build system
+2. Refactoring
 
 This work was inspired by Frank Porter's paper [Testing the Consistency of
 Two Histograms](https://arxiv.org/abs/0804.0380).  The two histograms
