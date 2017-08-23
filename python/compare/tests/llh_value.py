@@ -4,7 +4,7 @@ from scipy.special import binom
 
 def llh_value(h1, h2):
     r"""
-    Compare histograms h1, h2 with the log likelihood ratio test.
+    Compare histograms h1, h2 with the log likelihood value test.
     """
     result = 0.
     Nu = sum(h1.bin_values)
