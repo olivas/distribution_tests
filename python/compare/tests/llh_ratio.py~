@@ -1,0 +1,45 @@
+from math import log
+from scipy.stats import chisqprob, norm
+# Test from F.Porter "Testing Consistency of Two Histograms" arXiv : 0804.0380# 
+
+def _p_bdm_empirical(ts, entries,bins):
+    r"""Empirical distribution of BDM test statistic in null-hypothesis trials.
+    Assumes both histograms have similar numbers of entries.
+    
+    """
+    # This isn't perfect but at least it resolves degeneracies
+    log_entries = log10(entries)
+    logvar = -0.0022  - 1.3962*log_entries
+    sigma = sqrt(10**logvar)
+    mu = 1.1121/sqrt(bins)
+    return norm.sf(ts, loc=mu, scale=sigma)
+
+def llh_ratio(h1,h2):
+    r"""!!!!!!!!!!!!!!!!!
+    Do not use this test! It's current implementation is not reliable enough!
+    !!!!!!!!!!!!!!!!!
+    Compare histograms h1, h2 with the Bhattacharyya distance measure.
+    Assumes the histograms have the same binning. 
+    Treating their entries vectors, normalize, and take the dot product.
+    Output:
+        ts : float
+            The BDM.
+        p  : float
+            An empirically derived measure of the p-value.
+    
+    """
+    if sum(h1.bin_values) == 0 or sum(h2.bin_values) == 0:
+        return 0., 0.
+    # Bhattacharyya distance measure
+    terms = [u*v for u,v in zip(h1.bin_values, h2.bin_values)\
+             if u > 0 and v > 0]
+    n1 = sum(h1.bin_values)
+    n2 = sum(h2.bin_values)
+    p = sqrt(n1*n2) # math.sqrt casts its arguments to a float
+    ts = sqrt(sum(terms))/p # => this avoids an integer division bug in this line
+    # Does not follow a Chi2 distribution anywhere close to this
+    #return chisq, chisqprob(chisq, len(terms) - 1) # p was always = 1.    
+    # Use a distribution derived empirically when both histograms have similar statistics
+    # In case they are different: err on the side of more warnings
+    return ts, min(_p_bdm_empirical(ts, n1, len(h1.bin_values)),
+                   _p_bdm_empirical(ts, n2, len(h2.bin_values)))
