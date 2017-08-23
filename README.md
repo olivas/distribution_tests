@@ -2,8 +2,8 @@
 The project contains tools for testing two continuous distributions to determine
 similarity.
 
-Introduction
-------------
+# Introduction
+
 The overall goal of this project is to provide tools to detect change (when no
 change was intended) that affects your favorite continuous distribution as early
 as possible.
@@ -32,25 +32,25 @@ compared to these continually.  Benchmark histograms, ideally, will be
 updated rarely, only when a change was made where the change in the
 distribution was expected and desired.
 
-Dependencies
-------------
+# Dependencies
+
 * Python 3 - numpy, scipy, matplotlib
 * optional: cmake and C++11
 
-Quick Tutorial
---------------
+# Quick Tutorial
+
 To get started you first need to generate a set of benchmark histograms.
 
-Tests
-=====
+# Tests
+
 For comparing two histograms the following tests are provided.
 
-Tests for Normalization
-#######################
+## Tests for Normalization
+
 * Chi2
 
-Tests for Shape
-###############
+## Tests for Shape
+
 * Chi2 
 * Likelihood Ratio
 * Likelihood Value
@@ -59,14 +59,12 @@ Tests for Shape
 * Cramer-von-Mises
 * Anderson-Darling
 
-Future Plans
-------------
+# Future Plans
 The next step for this project is to provide tools to train higher level
 structures, like BDTs, neural nets, or Bayesian networks, to help users
 filter out false positives.
 
-Contributors
-------------
+# Contributors
 * Alex Olivas - University of Maryland (UMD)
 * Christoph Raab - Technical University of Munich (TUM)
 * Thomas Stuttard - Neils Bohr Institute (NBI)
