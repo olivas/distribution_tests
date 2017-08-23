@@ -55,7 +55,7 @@ For comparing two histograms the following tests are provided.
 * Likelihood Ratio
 * Likelihood Value
 * Kolmogorov-Smirnov
-* Bhattacharyya Distance Measure
+* Geometric Bhattacharyya Distance Measure
 * Cramer-von-Mises
 * Anderson-Darling
 
