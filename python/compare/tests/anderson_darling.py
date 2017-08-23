@@ -1,5 +1,4 @@
 from math import log
-from scipy.special import binom
 # Test from F.Porter "Testing Consistency of Two Histograms" arXiv : 0804.0380# 
 
 def anderson_darling(h1, h2):
