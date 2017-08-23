@@ -67,7 +67,7 @@ filter out false positives.
 
 Contributors
 ------------
-Alex Olivas - University of Maryland (UMD)
-Christoph Raab - Technical University of Munich (TUM)
-Thomas Stuttard - Neils Bohr Institute (NBI)
-Tomasz Palczewski - University of California at Berkeley (Cal)
+* Alex Olivas - University of Maryland (UMD)
+* Christoph Raab - Technical University of Munich (TUM)
+* Thomas Stuttard - Neils Bohr Institute (NBI)
+* Tomasz Palczewski - University of California at Berkeley (Cal)
