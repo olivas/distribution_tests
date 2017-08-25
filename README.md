@@ -34,7 +34,7 @@ distribution was expected and desired.
 
 # Dependencies
 
-* Python 3 - numpy, scipy, matplotlib
+* Python 3 - numpy, scipy, matplotlib, sklearn
 * optional: cmake and C++11
 
 # Quick Tutorial
