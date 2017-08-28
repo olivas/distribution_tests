@@ -26,7 +26,7 @@ def test_shape_chisq(h1, h2):
         terms = [(u/s - v)**2/(u/ssq + v) \
                  for u,v in zip(h1.bin_values, h2.bin_values) \
                  if u > 0 and v > 0 ]
-    chisq = sum(terms)
-    return chisq, chisqprob(chisq, len(terms) - 1)
+    T = sum(terms)
+    return T
     
     

@@ -25,5 +25,6 @@ def anderson_darling(h1, h2):
         term2 = (1./Nv)*((Nu+Nv)*sigma_vj - Nv*sigma_j)**2
 
         result += t*(term1 + term2)/(sigma_j *(Nu+Nv - sigma_j))
-        
-    return factor * result
+
+    T = factor * result
+    return T

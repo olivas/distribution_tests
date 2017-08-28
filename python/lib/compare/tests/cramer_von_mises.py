@@ -15,4 +15,5 @@ def cramer_von_mises(h1, h2):
         v_ecdf = sum([bn for bn in h2.bin_values[:i]])/sum(h2.bin_values)        
         result += t*(u_ecdf - v_ecdf)**2
     factor = Nu*Nv/(Nu+Nv)**2
-    return factor * result
+    T = factor * result
+    return T

@@ -22,4 +22,5 @@ def llh_ratio(h1, h2):
         term1 = t*log((1+v/u)/(1+Nv/Nu))
         term2 = v*log((Nv/Nu)*(u/v))
         result += term1 + term2
-    return -2*result
+    T = -2*result
+    return T

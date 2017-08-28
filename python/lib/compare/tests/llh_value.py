@@ -15,4 +15,5 @@ def llh_value(h1, h2):
         term2 = t*log(Nu/(Nu + Nv))
         term3 = v*log(Nv/Nu)
         result += term1 + term2 + term3
-    return -result
+    T = -result
+    return T
